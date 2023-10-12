@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+
+    <!-- Подключаем CSS файлы -->
+    <link rel="stylesheet" href="./css/default.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!--Заголовок сайта-->
+    <title>TumbaWeather</title>
+
+    <!-- Подключаем библиотеки gsap -->
+    <script src="./libs/gsap/gsap.min.js" defer></script>
+    <script src="./libs/gsap/ScrollSmoother.min.js" defer></script>
+    <script src="./libs/gsap/ScrollTrigger.min.js" defer></script>
+
+    <!-- Подключаем JavaScript файлы -->
+    <script src="./js/gsap.js" defer></script>
+    <script src="./js/time.js" defer></script>
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <header class="header">
+          <span class="header__logo">TumbaWeather</span>
+        </header>
+        <main class="main">
+          <aside class="aside">
+            <div class="aside__header">
+              <p class="aside__title" id="city-title">
+                ...<span id="country-title">COUNTRY</span>
+              </p>
+            </div>
+            <article class="article" id="card-container"></article>
+          </aside>
+          <section class="section">
+            <input
+              id="cityNameId"
+              name="city_name"
+              class="section__bar"
+              type="text"
+              placeholder="Название города"
+            />
+            <input
+              id="sendButtonId"
+              class="section__button"
+              type="submit"
+              value="Узнать погоду"
+            />
+            <div class="section__information">
+              <p>Дата и время в вашем городе:</p>
+              <span id="current-time"></span>
+            </div>
+          </section>
+        </main>
+        <footer class="footer">
+          <span class="footer__logo">TumbaWeather</span>
+          <div class="footer__info">
+            <p class="info__text">«Работает на Open Source»</p>
+            <a
+              class="info__link"
+              href="https://github.com/dnbbch/tumba-weather"
+            >
+              Репозиторий проекта на GitHub
+            </a>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
